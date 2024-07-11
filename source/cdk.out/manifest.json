@@ -1,0 +1,843 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "SecurityFindingGeneratorStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "SecurityFindingGeneratorStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "SecurityFindingGeneratorStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "SecurityFindingGeneratorStack.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "security-demo": "true"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e95e2f0cff3b398168d1cab8749040ae1faf65f3c83c9cfd8dea6bcd71b5f8e0.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "SecurityFindingGeneratorStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "SecurityFindingGeneratorStack.assets"
+      ],
+      "metadata": {
+        "/SecurityFindingGeneratorStack": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "security-demo",
+                "Value": "true"
+              }
+            ]
+          }
+        ],
+        "/SecurityFindingGeneratorStack/latest_ec2_ami_id": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "latestec2amiid"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/cw_flow_logs_parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cwflowlogsparameter"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/cw_flow_logs/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cwflowlogs3E4CC8F1"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_service_user_data": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securityserviceuserdata"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_parameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemoparameter0ACE2DB9"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpc19F98734"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_public_subnetSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemopublicsubnetSubnet1Subnet20F86AF9"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_public_subnetSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemopublicsubnetSubnet1RouteTable425FA69A"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_public_subnetSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemopublicsubnetSubnet1RouteTableAssociation987A2BE2"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_public_subnetSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemopublicsubnetSubnet1DefaultRoute93D38512"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_public_subnetSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemopublicsubnetSubnet1EIP409A760F"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_public_subnetSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemopublicsubnetSubnet1NATGatewayDDB85835"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_public_subnetSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemopublicsubnetSubnet2Subnet92C97794"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_public_subnetSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemopublicsubnetSubnet2RouteTable0BF013E9"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_public_subnetSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemopublicsubnetSubnet2RouteTableAssociationF548484C"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_public_subnetSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemopublicsubnetSubnet2DefaultRoute371EB58B"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_private_iso_subnetSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemoprivateisosubnetSubnet1SubnetA3E5A884"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_private_iso_subnetSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemoprivateisosubnetSubnet1RouteTable98300A7F"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_private_iso_subnetSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemoprivateisosubnetSubnet1RouteTableAssociation846F781B"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_private_iso_subnetSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemoprivateisosubnetSubnet2Subnet5AC8A6B6"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_private_iso_subnetSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemoprivateisosubnetSubnet2RouteTable9E8343A9"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_private_iso_subnetSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemoprivateisosubnetSubnet2RouteTableAssociation6C3E93BD"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_private_nat_subnetSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemoprivatenatsubnetSubnet1SubnetF2EA78AC"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_private_nat_subnetSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemoprivatenatsubnetSubnet1RouteTable24820C04"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_private_nat_subnetSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemoprivatenatsubnetSubnet1RouteTableAssociation8CB82AA3"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_private_nat_subnetSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemoprivatenatsubnetSubnet1DefaultRoute843914D1"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_private_nat_subnetSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemoprivatenatsubnetSubnet2Subnet05A280E1"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_private_nat_subnetSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemoprivatenatsubnetSubnet2RouteTableC76AF443"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_private_nat_subnetSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemoprivatenatsubnetSubnet2RouteTableAssociation65165870"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/demo_private_nat_subnetSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcdemoprivatenatsubnetSubnet2DefaultRoute730E4921"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcIGW650426DD"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcVPCGWCB57A544"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/s3/IAMRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcs3IAMRole5C71C7E6"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/s3/IAMRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcs3IAMRoleDefaultPolicy1F2CD207"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/s3/FlowLog": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcs3FlowLog79BD08A0"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/ec2_endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcec2endpoint2C8D5D74"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/ec2_msg_endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcec2msgendpoint0CC4EED7"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/kms_endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpckmsendpoint434E2841"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/ssm_endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcssmendpoint8B47E3A4"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/ssm_msg_endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcssmmsgendpoint1B6D96CA"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_vpc/s3_endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemovpcs3endpointD663430F"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_sg/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemosg72A385FB"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_sg/to SecurityFindingGeneratorStacksecuritydemosgAFB78EF5:443": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemosgtoSecurityFindingGeneratorStacksecuritydemosgAFB78EF5443948D1F4A"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_sg/from SecurityFindingGeneratorStacksecuritydemosgAFB78EF5:443": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemosgfromSecurityFindingGeneratorStacksecuritydemosgAFB78EF54439F85C22D"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_s3_user_data_key/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemos3userdatakey646F9E0C"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_s3_user_data_key/Alias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemos3userdatakeyAlias1EC53AFA"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_s3_user_data_bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemos3userdatabucketC56A23F8"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_s3_user_data_bucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemos3userdatabucketPolicy8A372AE6"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_s3_user_data_bucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemos3userdatabucketAutoDeleteObjectsCustomResourceC86418C3"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_s3_user_data_bucket_parameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemos3userdatabucketparameter668DD41E"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/user_data_asset_deployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "userdataassetdeploymentAwsCliLayer6CA537FA"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/user_data_asset_deployment/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "userdataassetdeploymentCustomResourceA93FD77E"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/ec2_instance_module_role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ec2instancemodulerole43B94AC9"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/EC2CreateModuleManagedPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EC2CreateModuleManagedPolicy63CA4A4D"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/demo_ec2_instance/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "demoec2instanceInstanceProfile75C2C5AE"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/demo_ec2_instance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "demoec2instanceDD70359F"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/lambda_ecr_cleanup_role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaecrcleanuprole6D9E85AE"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/lambdaECRCleanupManagedPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaECRCleanupManagedPolicyBBCC8308"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/ecr_cleanup_function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecrcleanupfunctionF139BA80"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/ecr_rule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecrrule9A3A65CE"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/ecr_rule/AllowEventRuleSecurityFindingGeneratorStackecrcleanupfunction3CF36460": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecrruleAllowEventRuleSecurityFindingGeneratorStackecrcleanupfunction3CF36460703572E8"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/ecr_ResourceProvider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecrResourceProviderframeworkonEventServiceRole83957642"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/ecr_ResourceProvider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecrResourceProviderframeworkonEventServiceRoleDefaultPolicyAAA6F566"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/ecr_ResourceProvider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecrResourceProviderframeworkonEventB34C7296"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/ecr_ResourceProvider/framework-onEvent/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecrResourceProviderframeworkonEventLogRetention00AEF6F6"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/ecr_cleanup_custom_action/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecrcleanupcustomaction"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutycondition"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/db_pw_parameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "dbpwparameter758A619A"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_kms_key/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemokmskeyA4F361CB"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_service_demo_bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securityservicedemobucketDB0AACC9"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_service_demo_bucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securityservicedemobucketPolicy174E48AB"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_service_demo_bucket_parameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securityservicedemobucketparameter92BFE963"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/eks_cluster_name_parameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eksclusternameparameterEBFB62AB"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_dynamodb": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "securitydemodynamodbB3DD1E6E"
+            }
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_dynamodb/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemodynamodbB3DD1E6E"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/security_demo_dynamodb_parameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "securitydemodynamodbparameter0E1E1F46"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_demo_user/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutydemouser0B126858"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/compromised_access_key/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "compromisedaccesskey16624257"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/compromised_access_key_parameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "compromisedaccesskeyparameter82ED7E7B"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/compromised_access_key_secret/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "compromisedaccesskeysecretF728B00B"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_demo_user_policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutydemouserpolicy81C4A68A"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_demo_user_key/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutydemouserkey478D22BC"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/ec2_general_role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ec2generalrole126EB842"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/ec2_general_managed_policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ec2generalmanagedpolicy56575A6C"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/compromised_ec2_instance/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "compromisedec2instanceInstanceProfileC4F17054"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/compromised_ec2_instance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "compromisedec2instanceF21EFAAC"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/compromised_ec2_eip": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "compromisedec2eip"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/lambda_threat_list_role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdathreatlistrole03396CF8"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/lambdaGDThreatListManagedPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaGDThreatListManagedPolicy890278F5"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_threat_list_function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutythreatlistfunction69378CD7"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_threat_list_provider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutythreatlistproviderframeworkonEventServiceRole17D02AE6"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_threat_list_provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutythreatlistproviderframeworkonEventServiceRoleDefaultPolicyF24F1A84"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_threat_list_provider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutythreatlistproviderframeworkonEvent393B7B90"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_threat_list_provider/framework-onEvent/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutythreatlistproviderframeworkonEventLogRetentionCA91CF17"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/threat_list_custguardduty_threat_list_custom_actionom_action/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "threatlistcustguarddutythreatlistcustomactionomaction"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_topic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutytopic4054B514"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_topic/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutytopicPolicy26B9F944"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_iam_remediation_role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutyiamremediationrole72463300"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/lambdaGDIAMRemediationManagedPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaGDIAMRemediationManagedPolicy62F720D5"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_iam_remediation_function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutyiamremediationfunction19200E5D"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/lambda_eks_cleanup_role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaekscleanuproleB9A435D9"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/lambdaEKSCleanupManagedPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaEKSCleanupManagedPolicyB977EE91"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/eks_cleanup_function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ekscleanupfunctionA5DAE504"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/eks_provider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eksproviderframeworkonEventServiceRole84214663"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/eks_provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eksproviderframeworkonEventServiceRoleDefaultPolicy775F29AB"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/eks_provider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eksproviderframeworkonEventBDC21500"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/eks_provider/framework-onEvent/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eksproviderframeworkonEventLogRetentionB59CA96C"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/eks_cleanup_custom_action/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ekscleanupcustomaction"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_eks_remediation_function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutyeksremediationfunctionC5E0C831"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_remediation_eks_rule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutyremediationeksrule92B11FBD"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_remediation_eks_rule/AllowEventRuleSecurityFindingGeneratorStackguarddutyeksremediationfunctionA12C8F75": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutyremediationeksruleAllowEventRuleSecurityFindingGeneratorStackguarddutyeksremediationfunctionA12C8F7525EB312E"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_remediation_credexfil_rule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutyremediationcredexfilrule1771230D"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_remediation_credexfil_rule/AllowEventRuleSecurityFindingGeneratorStackguarddutyiamremediationfunction3107FC15": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutyremediationcredexfilruleAllowEventRuleSecurityFindingGeneratorStackguarddutyiamremediationfunction3107FC15B791C3A2"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_respond_IAMUser_rule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutyrespondIAMUserrule420C77E9"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/guardduty_respond_S3_rule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "guarddutyrespondS3rule2864D3F4"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/gd_iam_subscription": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "gdiamsubscription"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/gd_eks_subscription": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "gdekssubscription"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/SecurityFindingGeneratorStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "SecurityFindingGeneratorStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

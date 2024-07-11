@@ -168,7 +168,7 @@ export class SecurityFindingGeneratorStack extends Stack {
     });
 
     security_demo_vpc.addInterfaceEndpoint('s3_endpoint',{
-      service: new ec2.InterfaceVpcEndpointService('com.amazonaws.us-east-1.s3', 443),
+      service: new ec2.InterfaceVpcEndpointService('com.amazonaws.ap-northeast-1.s3', 443),
       subnets: {
          subnets: [
           security_demo_vpc.selectSubnets({subnetGroupName: 'demo_private_nat_subnet'}).subnets[0]
